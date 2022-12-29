@@ -3,7 +3,7 @@ echo "Welcome to the local and global scope of variables <br>";
 
 $a = 34; // Global variable
 
-// global variable score are outside the functions in php
+// global variable scope are outside the functions in php
 
 function printValue(){
     // $a = 90; // Local variable

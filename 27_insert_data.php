@@ -1,4 +1,5 @@
-<?php
+<?php 
+
 // connecting to the database
 $servername = "localhost";
 $username = "root";
@@ -16,17 +17,19 @@ else{
     echo "Connection was successful!";
 }
 
-// create table in the database
-$sql = "CREATE TABLE `Trip` (`Sr No` INT NOT NULL AUTO_INCREMENT , `Name` VARCHAR(11) NOT NULL , `Dest` VARCHAR(11) NOT NULL , PRIMARY KEY (`Sr No`))";
+// variables to be inserted into the table
+$name = "Doraemon";
+$destination = "Japan";
+
+// sql query to be executed
+$sql = "INSERT INTO `trip` (`Name`, `Dest`) VALUES ('$name', '$destination');";
 $result = mysqli_query($conn, $sql);
 
-// check for the table creation success
+// Add a new trip to the trip table in the database
 if ($result){
-    echo "The table was created successfully!<br>";
+    echo "The record was inserted successfully <br>";
 }
 else{
-    echo "The table was not created successfully <br>";
+    echo "The record was not inserted    successfully!<br>";
     echo "Because of this error --> ". mysqli_error($conn);
 }
-
-?>

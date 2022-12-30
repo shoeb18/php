@@ -16,7 +16,7 @@ else{
 }
 
 // create a database
-$sql = "CREATE DATABASE MYSCHOOL";
+$sql = "CREATE DATABASE dbShoeb";
 $result = mysqli_query($conn, $sql);
 
 echo "The result is : ";
